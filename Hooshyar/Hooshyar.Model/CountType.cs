@@ -6,7 +6,9 @@ using System.Threading.Tasks;
 
 namespace Hooshyar.Model
 {
-    public class Class1
-    {
-    }
+	public class CountType
+	{
+		public int Id { get; set; }
+		public string Name { get; set; }	
+	}
 }
