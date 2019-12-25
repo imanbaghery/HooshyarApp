@@ -27,7 +27,7 @@ namespace Hooshyar.WebApi.Controllers
 			_itemService = itemService;
 		}
 
-		[Route("ItemService/AddItem")]
+		//[Route("ItemService/AddItem")]
 		[HttpPost]
 		[HttpGet]
 		[ResponseType(typeof(BaseResult))]
@@ -41,7 +41,7 @@ namespace Hooshyar.WebApi.Controllers
 
 				result.ResultCode = Results.Success.GetCode();
 				result.Message = Results.Success.GetDescription();
-
+				_unitOfWork.SaveChanges();
 			}
 			catch (Exception e)
 			{
@@ -53,7 +53,7 @@ namespace Hooshyar.WebApi.Controllers
 
 		}
 
-		[Route("BuyerService/Registration")]
+		//[Route("ItemService/GetItems")]
 		[HttpPost]
 		[HttpGet]
 		[ResponseType(typeof(BaseResult))]

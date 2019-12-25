@@ -8,6 +8,10 @@ namespace Hooshyar.Model
 {
     public class Item	
     {
+	    public Item()
+	    {
+		    
+	    }
 	    public Item(string name,int count,int countTypeId)
 	    {
 		    Name = name;

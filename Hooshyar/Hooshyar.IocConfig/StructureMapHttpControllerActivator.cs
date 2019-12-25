@@ -10,6 +10,7 @@ using StructureMap;
 
 namespace Hooshyar.IocConfig
 {
+	//for use structure map in web api
 	public class StructureMapHttpControllerActivator : IHttpControllerActivator
 	{
 		private readonly IContainer _container;
