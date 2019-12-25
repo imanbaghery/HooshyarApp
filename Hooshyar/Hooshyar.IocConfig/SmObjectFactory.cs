@@ -14,6 +14,7 @@ using StructureMap.Web;
 
 namespace Hooshyar.IocConfig
 {
+	//Structure map base config
 	public static class SmObjectFactory
 	{
 		private static readonly Lazy<Container> _containerBuilder =
@@ -39,13 +40,6 @@ namespace Hooshyar.IocConfig
 				ioc.For<DbContext>().HybridHttpOrThreadLocalScoped().Use(context => (HooshyarDbContext)context.GetInstance<IUnitOfWork>());
 
 				ioc.For<IItemService>().Use<ItemService>();
-
-				//ioc.Policies.SetAllProperties(y =>
-				//{
-				//	y.OfType<IUnitOfWork>();
-				//	y.OfType<IItemService>();
-				//	y.OfType<DbContext>();
-				//});
 
 			});
 			return container;

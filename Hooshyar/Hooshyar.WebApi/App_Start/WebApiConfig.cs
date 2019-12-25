@@ -13,7 +13,9 @@ namespace Hooshyar.WebApi
     {
         public static void Register(HttpConfiguration config)
         {
-	        var container = SmObjectFactory.Container;
+			//config structuremap
+			//change defalut HttpControllerActivator with StructureMapHttpControllerActivator
+			var container = SmObjectFactory.Container;
 	        GlobalConfiguration.Configuration.Services.Replace(
 		        typeof(IHttpControllerActivator), new StructureMapHttpControllerActivator(container));
 

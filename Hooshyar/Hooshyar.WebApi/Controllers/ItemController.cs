@@ -15,6 +15,7 @@ using Hooshyar.WebApi.Result;
 
 namespace Hooshyar.WebApi.Controllers
 {
+	//this is webapi controller for rest services
 	public class ItemServiceController : ApiController
 
 	{

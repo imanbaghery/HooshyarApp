@@ -46,8 +46,8 @@ namespace Hooshyar.Service.EfService
 
 		public IList<Item> GetAll()
 		{
-			var result= _items.OrderBy(a=>a.Id).ToList();
-			return result;
+			var items= _items.Include(a=>a.CountType).OrderBy(a=>a.Id).ToList();
+			return items;
 		}
 	}
 }
