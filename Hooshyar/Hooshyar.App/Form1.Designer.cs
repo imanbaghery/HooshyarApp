@@ -28,11 +28,14 @@
 		/// </summary>
 		private void InitializeComponent()
 		{
-			DevExpress.XtraGrid.GridLevelNode gridLevelNode2 = new DevExpress.XtraGrid.GridLevelNode();
+			DevExpress.XtraGrid.GridLevelNode gridLevelNode1 = new DevExpress.XtraGrid.GridLevelNode();
 			this.grdItems = new DevExpress.XtraGrid.GridControl();
 			this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
 			this.btnAdd = new DevExpress.XtraEditors.SimpleButton();
 			this.btnExcel = new DevExpress.XtraEditors.SimpleButton();
+			this.Name = new DevExpress.XtraGrid.Columns.GridColumn();
+			this.Count = new DevExpress.XtraGrid.Columns.GridColumn();
+			this.CountTypeId = new DevExpress.XtraGrid.Columns.GridColumn();
 			((System.ComponentModel.ISupportInitialize)(this.grdItems)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
 			this.SuspendLayout();
@@ -40,9 +43,9 @@
 			// grdItems
 			// 
 			this.grdItems.Dock = System.Windows.Forms.DockStyle.Bottom;
-			gridLevelNode2.RelationName = "Level1";
+			gridLevelNode1.RelationName = "Level1";
 			this.grdItems.LevelTree.Nodes.AddRange(new DevExpress.XtraGrid.GridLevelNode[] {
-            gridLevelNode2});
+            gridLevelNode1});
 			this.grdItems.Location = new System.Drawing.Point(0, 83);
 			this.grdItems.MainView = this.gridView1;
 			this.grdItems.Name = "grdItems";
@@ -53,6 +56,10 @@
 			// 
 			// gridView1
 			// 
+			this.gridView1.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.Name,
+            this.Count,
+            this.CountTypeId});
 			this.gridView1.GridControl = this.grdItems;
 			this.gridView1.Name = "gridView1";
 			// 
@@ -72,6 +79,30 @@
 			this.btnExcel.TabIndex = 3;
 			this.btnExcel.Text = "Export To Excel";
 			// 
+			// Name
+			// 
+			this.Name.Caption = "نام";
+			this.Name.FieldName = "Name";
+			this.Name.Name = "Name";
+			this.Name.Visible = true;
+			this.Name.VisibleIndex = 0;
+			// 
+			// Count
+			// 
+			this.Count.Caption = "تعداد";
+			this.Count.FieldName = "Count";
+			this.Count.Name = "Count";
+			this.Count.Visible = true;
+			this.Count.VisibleIndex = 1;
+			// 
+			// CountTypeId
+			// 
+			this.CountTypeId.Caption = "واحد";
+			this.CountTypeId.FieldName = "CountTypeId";
+			this.CountTypeId.Name = "CountTypeId";
+			this.CountTypeId.Visible = true;
+			this.CountTypeId.VisibleIndex = 2;
+			// 
 			// MainForm
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -80,8 +111,7 @@
 			this.Controls.Add(this.btnExcel);
 			this.Controls.Add(this.btnAdd);
 			this.Controls.Add(this.grdItems);
-			this.Name = "MainForm";
-			this.Text = "Hooshyar";
+			//this.Name = "MainForm";this.Text = "Hooshyar";
 			this.Load += new System.EventHandler(this.Form1_Load);
 			((System.ComponentModel.ISupportInitialize)(this.grdItems)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
@@ -94,6 +124,9 @@
 		private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
 		private DevExpress.XtraEditors.SimpleButton btnAdd;
 		private DevExpress.XtraEditors.SimpleButton btnExcel;
+		private DevExpress.XtraGrid.Columns.GridColumn Name;
+		private DevExpress.XtraGrid.Columns.GridColumn Count;
+		private DevExpress.XtraGrid.Columns.GridColumn CountTypeId;
 	}
 }
 

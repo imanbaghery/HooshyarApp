@@ -45,7 +45,7 @@ namespace Hooshyar.App
 		private void BindGrid()
 		{
 			var items = _itemService.GetAll();
-
+			grdItems.DataSource = items;
 		}
 	}
 }
