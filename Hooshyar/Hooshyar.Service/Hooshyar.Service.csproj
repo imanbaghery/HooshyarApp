@@ -57,7 +57,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="EfService\CountTypeService.cs" />
     <Compile Include="EfService\ItemService.cs" />
+    <Compile Include="Interface\ICountTypeService.cs" />
     <Compile Include="Interface\IItemService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

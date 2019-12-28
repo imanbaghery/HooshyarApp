@@ -40,7 +40,8 @@ namespace Hooshyar.IocConfig
 				ioc.For<DbContext>().HybridHttpOrThreadLocalScoped().Use(context => (HooshyarDbContext)context.GetInstance<IUnitOfWork>());
 
 				ioc.For<IItemService>().Use<ItemService>();
-
+				ioc.For<ICountTypeService>().Use<CountTypeService>();
+				
 			});
 			return container;
 		}

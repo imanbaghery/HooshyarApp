@@ -22,7 +22,7 @@ namespace Hooshyar.Data.Migrations
 			//  to avoid creating duplicate seed data. E.g.
 			//
 			context.CountTypes.AddOrUpdate(
-			  p => p.Id,
+			  p => p.Name,
 			  new CountType { Name = "عدد" },
 			  new CountType { Name = "کیلو" },
 			  new CountType { Name = "تن" }

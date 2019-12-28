@@ -44,7 +44,7 @@ namespace Hooshyar.Service.EfService
 			_items.Remove(item);
 		}
 
-		public IList<Item> GetAll()
+		public List<Item> GetAll()
 		{
 			var items= _items.Include(a=>a.CountType).OrderBy(a=>a.Id).ToList();
 			return items;

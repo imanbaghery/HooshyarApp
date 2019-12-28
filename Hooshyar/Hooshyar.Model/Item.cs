@@ -12,7 +12,7 @@ namespace Hooshyar.Model
 	    {
 		    
 	    }
-	    public Item(string name,int count,int countTypeId)
+	    public Item(string name,decimal count,int countTypeId)
 	    {
 		    Name = name;
 		    Count = count;
@@ -20,7 +20,7 @@ namespace Hooshyar.Model
 	    }
 	    public int Id { get; set; }
 	    public string Name { get; set; }
-	    public int Count { get; set; }
+	    public decimal Count { get; set; }
 
 	    public int? CountTypeId { get; set; }
 	    public CountType CountType { get; set; }

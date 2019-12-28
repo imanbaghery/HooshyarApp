@@ -58,6 +58,10 @@
     <Compile Include="Migrations\201912250947208_change.Designer.cs">
       <DependentUpon>201912250947208_change.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201912281053472_changeCount_toDecimal.cs" />
+    <Compile Include="Migrations\201912281053472_changeCount_toDecimal.Designer.cs">
+      <DependentUpon>201912281053472_changeCount_toDecimal.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -77,6 +81,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201912250947208_change.resx">
       <DependentUpon>201912250947208_change.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201912281053472_changeCount_toDecimal.resx">
+      <DependentUpon>201912281053472_changeCount_toDecimal.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

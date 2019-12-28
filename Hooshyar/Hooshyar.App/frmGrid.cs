@@ -32,9 +32,14 @@ namespace Hooshyar.App
 		private void BtnAddClick(object sender, EventArgs e)
 		{
 			var frmAdd=new frmAdd();
-			
+			frmAdd.FormClosed += FrmAdd_FormClosed;
 			frmAdd.ShowDialog();
 
+		}
+
+		private void FrmAdd_FormClosed(object sender, FormClosedEventArgs e)
+		{
+			BindGrid();
 		}
 
 		private void FrmGridLoad(object sender, EventArgs e)

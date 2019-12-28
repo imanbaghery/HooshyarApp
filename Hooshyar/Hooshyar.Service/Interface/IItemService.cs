@@ -9,6 +9,6 @@ namespace Hooshyar.Service.Interface
 		Item Find(int id);
 		void Update(Item item);
 		void Delete(Item item);
-		IList<Item> GetAll();
+		List<Item> GetAll();
 	}
 }
