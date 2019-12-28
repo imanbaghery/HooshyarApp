@@ -13,11 +13,11 @@ using Hooshyar.Service.Interface;
 
 namespace Hooshyar.App
 {
-	public partial class MainForm : Form
+	public partial class frmGrid : Form
 	{
 		private IUnitOfWork _unitOfWork;
 		private IItemService _itemService;
-		public MainForm()
+		public frmGrid()
 		{
 			InitializeComponent();
 			InitializeEvents();			
@@ -25,17 +25,19 @@ namespace Hooshyar.App
 
 		private void InitializeEvents()
 		{
-			btnAdd.Click += BtnAdd_Click;
+			btnAdd.Click += BtnAddClick;
+			this.Load +=FrmGridLoad;
 		}
 
-		private void BtnAdd_Click(object sender, EventArgs e)
+		private void BtnAddClick(object sender, EventArgs e)
 		{
-			//var container = SmObjectFactory.Container;
+			var frmAdd=new frmAdd();
 			
-			
+			frmAdd.ShowDialog();
+
 		}
 
-		private void Form1_Load(object sender, EventArgs e)
+		private void FrmGridLoad(object sender, EventArgs e)
 		{
 			_unitOfWork = SmObjectFactory.Container.GetInstance<IUnitOfWork>();
 			_itemService = SmObjectFactory.Container.GetInstance<IItemService>();

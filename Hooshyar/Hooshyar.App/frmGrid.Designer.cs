@@ -1,6 +1,6 @@
 ﻿namespace Hooshyar.App
 {
-	partial class MainForm
+	partial class frmGrid
 	{
 		/// <summary>
 		/// Required designer variable.
@@ -28,14 +28,14 @@
 		/// </summary>
 		private void InitializeComponent()
 		{
-			DevExpress.XtraGrid.GridLevelNode gridLevelNode1 = new DevExpress.XtraGrid.GridLevelNode();
+			DevExpress.XtraGrid.GridLevelNode gridLevelNode2 = new DevExpress.XtraGrid.GridLevelNode();
 			this.grdItems = new DevExpress.XtraGrid.GridControl();
 			this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
-			this.btnAdd = new DevExpress.XtraEditors.SimpleButton();
-			this.btnExcel = new DevExpress.XtraEditors.SimpleButton();
 			this.Name = new DevExpress.XtraGrid.Columns.GridColumn();
 			this.Count = new DevExpress.XtraGrid.Columns.GridColumn();
 			this.CountTypeId = new DevExpress.XtraGrid.Columns.GridColumn();
+			this.btnAdd = new DevExpress.XtraEditors.SimpleButton();
+			this.btnExcel = new DevExpress.XtraEditors.SimpleButton();
 			((System.ComponentModel.ISupportInitialize)(this.grdItems)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
 			this.SuspendLayout();
@@ -43,9 +43,9 @@
 			// grdItems
 			// 
 			this.grdItems.Dock = System.Windows.Forms.DockStyle.Bottom;
-			gridLevelNode1.RelationName = "Level1";
+			gridLevelNode2.RelationName = "Level1";
 			this.grdItems.LevelTree.Nodes.AddRange(new DevExpress.XtraGrid.GridLevelNode[] {
-            gridLevelNode1});
+            gridLevelNode2});
 			this.grdItems.Location = new System.Drawing.Point(0, 83);
 			this.grdItems.MainView = this.gridView1;
 			this.grdItems.Name = "grdItems";
@@ -62,22 +62,6 @@
             this.CountTypeId});
 			this.gridView1.GridControl = this.grdItems;
 			this.gridView1.Name = "gridView1";
-			// 
-			// btnAdd
-			// 
-			this.btnAdd.Location = new System.Drawing.Point(504, 22);
-			this.btnAdd.Name = "btnAdd";
-			this.btnAdd.Size = new System.Drawing.Size(127, 40);
-			this.btnAdd.TabIndex = 2;
-			this.btnAdd.Text = "Add";
-			// 
-			// btnExcel
-			// 
-			this.btnExcel.Location = new System.Drawing.Point(12, 22);
-			this.btnExcel.Name = "btnExcel";
-			this.btnExcel.Size = new System.Drawing.Size(128, 40);
-			this.btnExcel.TabIndex = 3;
-			this.btnExcel.Text = "Export To Excel";
 			// 
 			// Name
 			// 
@@ -103,7 +87,23 @@
 			this.CountTypeId.Visible = true;
 			this.CountTypeId.VisibleIndex = 2;
 			// 
-			// MainForm
+			// btnAdd
+			// 
+			this.btnAdd.Location = new System.Drawing.Point(504, 22);
+			this.btnAdd.Name = "btnAdd";
+			this.btnAdd.Size = new System.Drawing.Size(127, 40);
+			this.btnAdd.TabIndex = 2;
+			this.btnAdd.Text = "Add";
+			// 
+			// btnExcel
+			// 
+			this.btnExcel.Location = new System.Drawing.Point(12, 22);
+			this.btnExcel.Name = "btnExcel";
+			this.btnExcel.Size = new System.Drawing.Size(128, 40);
+			this.btnExcel.TabIndex = 3;
+			this.btnExcel.Text = "Export To Excel";
+			// 
+			// frmMain
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -111,8 +111,8 @@
 			this.Controls.Add(this.btnExcel);
 			this.Controls.Add(this.btnAdd);
 			this.Controls.Add(this.grdItems);
-			//this.Name = "MainForm";this.Text = "Hooshyar";
-			this.Load += new System.EventHandler(this.Form1_Load);
+			this.Text = "Hooshyar";
+			
 			((System.ComponentModel.ISupportInitialize)(this.grdItems)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
 			this.ResumeLayout(false);
