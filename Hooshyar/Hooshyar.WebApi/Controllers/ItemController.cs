@@ -21,14 +21,15 @@ namespace Hooshyar.WebApi.Controllers
 	{
 		private IUnitOfWork _unitOfWork;
 		private IItemService _itemService;
+		private ICountTypeService _countTypeService;
 
-		public ItemServiceController(IUnitOfWork unitOfWork, IItemService itemService)
+		public ItemServiceController(IUnitOfWork unitOfWork, IItemService itemService, ICountTypeService countTypeService)
 		{
 			_unitOfWork = unitOfWork;
 			_itemService = itemService;
+			_countTypeService = countTypeService;
 		}
 
-		//[Route("ItemService/AddItem")]
 		[HttpPost]
 		[HttpGet]
 		[ResponseType(typeof(BaseResult))]
@@ -54,10 +55,8 @@ namespace Hooshyar.WebApi.Controllers
 
 		}
 
-		//[Route("ItemService/GetItems")]
-		[HttpPost]
 		[HttpGet]
-		[ResponseType(typeof(BaseResult))]
+		[ResponseType(typeof(GetItemsResultcs))]
 		public IHttpActionResult GetItems()
 		{
 			var result = new GetItemsResultcs();
@@ -66,6 +65,30 @@ namespace Hooshyar.WebApi.Controllers
 			
 				var items= _itemService.GetAll();
 				result.Items = items;
+				result.ResultCode = Results.Success.GetCode();
+				result.Message = Results.Success.GetDescription();
+
+			}
+			catch (Exception e)
+			{
+				result.ResultCode = Results.Exception.GetCode();
+				result.Message = Results.Exception.GetDescription();
+
+			}
+			return Ok(result);
+
+		}
+
+		[HttpGet]
+		[ResponseType(typeof(BaseResult))]
+		public IHttpActionResult GetCountTypes()
+		{
+			var result = new GetCountTypeResult();
+			try
+			{
+
+				var types = _countTypeService.GetTypes();
+				result.CountTypes = types;
 				result.ResultCode = Results.Success.GetCode();
 				result.Message = Results.Success.GetDescription();
 

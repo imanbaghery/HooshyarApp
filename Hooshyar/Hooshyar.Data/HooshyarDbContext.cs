@@ -8,6 +8,7 @@ using Hooshyar.Model;
 
 namespace Hooshyar.Data
 {
+	//this is my costumize dbContext
 	public class HooshyarDbContext:DbContext,IUnitOfWork
 		
 	{

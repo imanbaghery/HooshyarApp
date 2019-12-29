@@ -10,6 +10,11 @@ namespace Hooshyar.Utility
 {
 	public static class ExtentionMethodes
 	{
+		/// <summary>
+		/// get description from enum
+		/// </summary>
+		/// <param name="enu"></param>
+		/// <returns></returns>
 		public static string GetDescription(this Enum enu)
 		{
 			Type type = enu.GetType();
@@ -25,6 +30,12 @@ namespace Hooshyar.Utility
 			}
 			return enu.ToString();
 		}
+
+		/// <summary>
+		/// get integer number from enum
+		/// </summary>
+		/// <param name="enu"></param>
+		/// <returns></returns>
 		public static string GetCode(this Enum enu)
 		{
 			return enu.ToString("D");
